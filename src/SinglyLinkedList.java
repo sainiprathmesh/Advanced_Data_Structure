@@ -22,6 +22,7 @@ public class SinglyLinkedList {
         second.next = third;
         third.next = fourth;
         sll.display();
+        System.out.println("Length of List is : " + sll.length());
     }
 
     public void display() {
@@ -31,6 +32,19 @@ public class SinglyLinkedList {
             current = current.next;
         }
         System.out.println("null");
+    }
+
+    public int length() {
+        if (head == null) {
+            return 0;
+        }
+        int count = 0;
+        ListNode current = head;
+        while (current != null) {
+            count++;
+            current = current.next;
+        }
+        return count;
     }
     //head is instance variable
 }
